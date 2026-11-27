@@ -1,0 +1,120 @@
+:root {
+  --pink-primary: #e7a1b0;
+  --pink-hover: #d8899a;
+  --pink-soft: #fdf4f6;
+  --nude-bg: #f7f1ed;
+  --nude-card: #fffaf7;
+  --nude-border: #eadcd3;
+  --nude-mid: #c8a99a;
+  --cocoa-accent: #8c6a5d;
+  --espresso-text: #3e2c26;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Plus Jakarta Sans", "Inter", system-ui, -apple-system, sans-serif;
+  background-color: var(--nude-bg);
+  color: var(--espresso-text);
+  overflow-x: hidden;
+  margin: 0;
+}
+
+.bg-nude-bg {
+  background-color: var(--nude-bg);
+}
+
+.bg-nude-card {
+  background-color: var(--nude-card);
+}
+
+.bg-pink-soft {
+  background-color: var(--pink-soft);
+}
+
+.bg-pink-primary {
+  background-color: var(--pink-primary);
+}
+
+.bg-pink-primary:hover {
+  background-color: var(--pink-hover);
+}
+
+.text-espresso {
+  color: var(--espresso-text);
+}
+
+.text-cocoa {
+  color: var(--cocoa-accent);
+}
+
+.text-pink-primary {
+  color: var(--pink-primary);
+}
+
+.border-nude {
+  border-color: var(--nude-border);
+}
+
+.shadow-soft {
+  box-shadow: 0 10px 30px -10px rgba(62, 44, 38, 0.08);
+}
+
+.product-card {
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 18px 36px -14px rgba(140, 106, 93, 0.22);
+}
+
+.filter-pill {
+  transition: all 0.2s ease;
+}
+
+.filter-pill.is-active {
+  background-color: var(--espresso-text);
+  color: #ffffff;
+  border-color: var(--espresso-text);
+}
+
+.drawer-panel {
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.drawer-panel.is-closed {
+  transform: translateX(100%);
+}
+
+.modal-backdrop {
+  transition: opacity 0.2s ease;
+}
+
+.toast-item {
+  animation: toastSlideIn 0.25s ease forwards;
+}
+
+@keyframes toastSlideIn {
+  from {
+    opacity: 0;
+    transform: translateY(12px) scale(0.97);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.line-clamp-2 {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
